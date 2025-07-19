@@ -176,7 +176,7 @@ function setupAnimations() {
 function animateNameAndSubtitle() {
   if (!elements.animatedName || !elements.animatedSubtitle) return;
   
-  const fullText = "Hi, I'm Dhruv Yogesh Gajjar";
+  const fullText = "Hi, I'm Dhruv Gajjar";
   const subtitleText = "Mechanical Engineer";
   let charIndex = 0;
   
