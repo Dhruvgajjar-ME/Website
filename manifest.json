@@ -1,0 +1,21 @@
+{
+  "name": "Dhruv Y Gajjar - Mechanical Engineer Portfolio",
+  "short_name": "DYG Portfolio",
+  "description": "Mechanical Engineer specializing in spacecraft thermal design, composite materials, and advanced manufacturing techniques",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1419",
+  "theme_color": "#0ea5e9",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "business", "productivity"],
+  "lang": "en",
+  "dir": "ltr"
+} 

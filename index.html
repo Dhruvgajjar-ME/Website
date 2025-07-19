@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dhruv Y Gajjar - Mechanical Engineer specializing in spacecraft thermal design, composite materials, and advanced manufacturing techniques">
+  <meta name="keywords" content="mechanical engineer, spacecraft thermal design, composite materials, manufacturing, aerospace">
+  <meta name="author" content="Dhruv Y Gajjar">
+  
+  <!-- Performance optimizations -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://drive.google.com">
+  
+  <title>Dhruv Y Gajjar | Mechanical Engineer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0ea5e9">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="DYG Portfolio">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-container" aria-label="Loading portfolio">
+    <div class="loading-content">
+      <div class="loading-spinner" role="status" aria-label="Loading spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
+      <div class="loading-text">Loading...</div>
+    </div>
+  </div>
+
+  <!-- Space Background Canvas -->
+  <canvas id="space-bg" aria-hidden="true"></canvas>
+  
+  <!-- Decorative Space Elements -->
+  <div class="space-particles" aria-hidden="true">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  
+  <div class="constellation" aria-hidden="true">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+  
+  <!-- Decorative Engineering Icons -->
+  <div class="engineering-icons" aria-hidden="true">
+    <div class="eng-icon rocket-icon" style="top: 10%; left: 5%; animation-delay: 0s;">🚀</div>
+    <div class="eng-icon satellite-icon" style="top: 30%; left: 95%; animation-delay: 2s;">🛰️</div>
+    <div class="eng-icon airplane-icon" style="top: 60%; left: 3%; animation-delay: 4s;">✈️</div>
+    <div class="eng-icon space-shuttle-icon" style="top: 80%; left: 97%; animation-delay: 1s;">🚁</div>
+    <div class="eng-icon gear-icon" style="top: 20%; left: 2%; animation-delay: 1s;">⚙️</div>
+    <div class="eng-icon wrench-icon" style="top: 50%; left: 98%; animation-delay: 3s;">🔧</div>
+    <div class="eng-icon bolt-icon" style="top: 70%; left: 1%; animation-delay: 5s;">🔩</div>
+    <div class="eng-icon thermometer-icon" style="top: 90%; left: 4%; animation-delay: 4s;">🌡️</div>
+    <div class="eng-icon snowflake-icon" style="top: 15%; left: 98%; animation-delay: 6s;">❄️</div>
+  </div>
+  
+  <!-- Header Navigation -->
+  <header role="banner">
+    <div class="logo" aria-label="Dhruv Y Gajjar">DYG</div>
+    <nav role="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="#home" aria-label="Go to home section">Home</a></li>
+        <li><a href="#education" aria-label="Go to education and skills section">Education & Skills</a></li>
+        <li><a href="#projects" aria-label="Go to experience and projects section">
+          <span class="nav-full">Experience & Projects</span><span class="nav-short">Projects</span>
+        </a></li>
+        <li><a href="#publications" aria-label="Go to publications section">Publications</a></li>
+        <li><a href="#contact" aria-label="Go to contact section">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+    <!-- Hero Section -->
+    <section id="home" class="hero section fade-in" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="hero-left">
+          <h1 id="hero-title"><span id="animated-name" aria-label="Hi, I'm Dhruv Gajjar"></span></h1>
+          <div class="about-content">
+            <h3 id="animated-subtitle" aria-label="Mechanical Engineer"></h3>
+            <p>I'm a passionate mechanical engineer with a deep fascination for cutting-edge technology and innovation. Currently pursuing my Master's in Mechanical Engineering at the University of Maryland, I specialize in spacecraft thermal design, composite materials, and advanced manufacturing techniques.</p>
+            <p>My research experience spans from CFD analysis of magneto-rheological fluids for adaptive prosthetics to designing combustion chambers for UAV propulsion systems. I'm particularly drawn to projects that combine theoretical knowledge with practical applications in aerospace and space technology.</p>
+          </div>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary" aria-label="View my work and projects">View My Work →</a>
+            <a href="#contact" class="btn-secondary" aria-label="Get in touch via email">✉️ Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="decorations" aria-hidden="true">
+            <span class="satellite">🛰️</span>
+            <span class="gear">🔧</span>
+            <span class="planet">🪐</span>
+            <span class="comet">☄️</span>
+          </div>
+          <div class="profile-card">
+            <div class="profile-icon">
+              <img src="https://drive.google.com/thumbnail?id=1zDXjswfrLO4j9qRCYcLMLxkGaRwluFmg&sz=w280-h280-c" 
+                   alt="Dhruv Gajjar Profile Photo" 
+                   class="profile-photo"
+                   loading="lazy"
+                   onerror="this.src='https://drive.google.com/uc?export=view&id=1zDXjswfrLO4j9qRCYcLMLxkGaRwluFmg'; this.onerror=function(){this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=280&fit=crop&crop=face'; this.onerror=null;};">
+            </div>
+            <div class="profile-title">Mechanical Engineer</div>
+            <div class="profile-location">📍 College Park, MD</div>
+            <div class="profile-links" role="list">
+              <a href="mailto:dygajjar55@gmail.com" title="Email" class="profile-link-icon" role="listitem" aria-label="Send email to dygajjar55@gmail.com">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Email" class="link-icon">
+              </a>
+              <a href="https://scholar.google.com/citations?hl=en&user=Iv8-NMIAAAAJ" target="_blank" rel="noopener" title="Google Scholar" class="profile-link-icon" role="listitem" aria-label="View Google Scholar profile">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlescholar.svg" alt="Google Scholar" class="link-icon">
+              </a>
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener" title="GitHub" class="profile-link-icon" role="listitem" aria-label="View GitHub profile">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="link-icon">
+              </a>
+              <a href="https://www.linkedin.com/in/dhruv-gajjar-4a5b23289" target="_blank" rel="noopener" title="LinkedIn" class="profile-link-icon" role="listitem" aria-label="View LinkedIn profile">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" class="link-icon">
+              </a>
+              <a href="https://drive.google.com/file/d/1ePzVJdR3Ngwq3WcbLQNdIVtx2BSexkIY/view?usp=sharing" target="_blank" rel="noopener" title="CV" class="profile-link-icon" role="listitem" aria-label="Download CV">
+                <span class="cv-text">CV</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Education & Skills Section -->
+    <section id="education" class="section fade-in" aria-labelledby="education-title">
+      <h2 id="education-title">Education & Skills</h2>
+      <div class="education-skills-container">
+        <div class="education-left">
+          <h3>Education</h3>
+          <div class="timeline" role="list">
+            <div class="timeline-item" role="listitem">
+              <h4>University of Maryland, College Park</h4>
+              <span class="timeline-date">M.S. in Mechanical Engineering, 2023–Present</span>
+              <p>Specialization: Spacecraft Thermal Design</p>
+            </div>
+            <div class="timeline-item" role="listitem">
+              <h4>Previous University</h4>
+              <span class="timeline-date">B.S. in Mechanical Engineering, 2019–2023</span>
+              <p>Relevant Coursework: CFD, Thermodynamics, Rocket Propulsion</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-right">
+          <h3>Skills</h3>
+          <div class="skills-categories">
+            <div class="skill-category">
+              <div class="skills-list" role="list">
+                <span class="skill-item" role="listitem">FEA</span>
+                <span class="skill-item" role="listitem">CAD/CAM</span>
+                <span class="skill-item" role="listitem">CFD</span>
+                <span class="skill-item" role="listitem">GD&T</span>
+                <span class="skill-item" role="listitem">Structural Analysis</span>
+                <span class="skill-item" role="listitem">Thermal Analysis</span>
+                <span class="skill-item" role="listitem">Fluid Analysis</span>
+                <span class="skill-item" role="listitem">Engineering Documentation</span>
+                <span class="skill-item" role="listitem">Design Review</span>
+                <span class="skill-item" role="listitem">FMEA</span>
+                <span class="skill-item" role="listitem">CAPA</span>
+                <span class="skill-item" role="listitem">Pugh Matrix</span>
+                <span class="skill-item" role="listitem">Lean Manufacturing</span>
+                <span class="skill-item" role="listitem">Project Risk Management</span>
+                <span class="skill-item" role="listitem">SolidWorks</span>
+                <span class="skill-item" role="listitem">SpaceClaim</span>
+                <span class="skill-item" role="listitem">CATIA</span>
+                <span class="skill-item" role="listitem">AutoCAD</span>
+                <span class="skill-item" role="listitem">ANSYS</span>
+                <span class="skill-item" role="listitem">OpenFOAM</span>
+                <span class="skill-item" role="listitem">MATLAB</span>
+                <span class="skill-item" role="listitem">Python</span>
+                <span class="skill-item" role="listitem">MS Office</span>
+                <span class="skill-item" role="listitem">Adobe</span>
+                <span class="skill-item" role="listitem">Trello</span>
+                <span class="skill-item" role="listitem">Parabola</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section fade-in" aria-labelledby="projects-title">
+      <h2 id="projects-title">Experience & Projects</h2>
+      <div class="projects-content">
+        <article class="project-item">
+          <div class="project-image">
+            <img src="https://drive.google.com/thumbnail?id=1y3AP_XvthAKGcvQDReq8TxduzwwX3FsX&sz=w400-h250-c" 
+                 alt="Design of Balloon-Borne Payload Module" 
+                 class="project-photo"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/7fb3d3?text=Balloon+Payload'; this.onerror=null;">
+                          <div class="project-skills-container">
+                                  <button class="project-skill-btn">SolidWorks</button>
+                <a href="https://drive.google.com/file/d/1rVe-9mhf62NztUErmJ261V8e7ACgoC_E/view" target="_blank" rel="noopener" class="project-skill-btn" style="text-decoration: none;">View ExMAG poster</a>
+              </div>
+          </div>
+          <div class="project-content">
+            <h3>Design of Balloon-Borne Payload Module</h3>
+            <p>Designed a lightweight dust collection payload for micrometeorite sampling in the upper stratosphere using agar-agar gel. Developed a rack-and-pinion tray system with 15:90 gear ratio powered by BLDC motor and delivered a 1.5 kg flight-ready prototype. Presented at Indian Institute of Astrophysics' Modern Engineering Trends in Astronomy 2022 and NASA's ExMAG Fall 2022, selected for testing at TIFR-Hyderabad high-altitude balloon facility.</p>
+          </div>
+        </article>
+
+
+
+        <article class="project-item">
+          <div class="project-image">
+            <img src="https://drive.google.com/thumbnail?id=1jN1llQ28P2k7KiKk4Ho48nSDEbAE5_Fy&sz=w400-h250-c" 
+                 alt="Thermal analysis of Rectangular Duct" 
+                 class="project-photo"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/7fb3d3?text=Thermal+Analysis'; this.onerror=null;">
+            <div class="project-skills-container">
+              <button class="project-skill-btn">OpenFOAM</button>
+              <button class="project-skill-btn">Thermal Analysis</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Thermal analysis of Rectangular Duct</h3>
+            <p>Performed transient thermal simulations in ANSYS to evaluate temperature induced stress concentrations regions. Achieved a factor of safety (FOS) of 1.45 in critical regions and 2.0 in non-critical zones by performing topology optimizations, validating the chamber safe for high pressure combustion testing.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="project-image">
+            <img src="https://drive.google.com/thumbnail?id=1wlKlnk3UlIij3zJbWqx5T7cNucjIO-L5&sz=w400-h250-c" 
+                 alt="Design & Analysis of Combustion Chamber" 
+                 class="project-photo"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/7fb3d3?text=Combustion+Chamber'; this.onerror=null;">
+                          <div class="project-skills-container">
+                <button class="project-skill-btn">Structural Optimization</button>
+                <button class="project-skill-btn">Ansys Structural</button>
+                <button class="project-skill-btn">SolidWorks</button>
+              </div>
+          </div>
+          <div class="project-content">
+            <h3>Design & Analysis of Combustion Chamber</h3>
+            <p>Designed a transparent strand burner for UAV propulsion research to withstand 40 bar internal pressure while enabling optical access for laser diagnostics using a borosilicate glass window and aluminum casing.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="project-image">
+            <iframe src="https://drive.google.com/file/d/1ggjshE-XMOsJg5GdPm0mcdX9Nm_aTWm2/preview" 
+                    width="400" height="250" 
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen
+                    class="project-video"
+                    title="CFD Analysis of Magneto-rheological Fluids Video">
+            </iframe>
+            <div class="project-skills-container">
+              <button class="project-skill-btn">CFD</button>
+                                <button class="project-skill-btn">Ansys Fluent</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>CFD Analysis of Magneto-rheological Fluids</h3>
+            <p>Conducted comprehensive CFD analysis of magneto-rheological fluids for adaptive prosthetic applications. Analyzed fluid behavior under varying magnetic field strengths and developed computational models to predict performance characteristics for medical device applications.</p>
+          </div>
+        </article>
+
+
+
+        <article class="project-item">
+          <div class="project-image">
+            <img src="https://drive.google.com/thumbnail?id=192NHC59yHyP_nLsycY5ktQiV9SgdsH-Y&sz=w400-h250-c" 
+                 alt="Structural Analysis of Tiltrotor hub" 
+                 class="project-photo"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/7fb3d3?text=Tiltrotor+Analysis'; this.onerror=null;">
+            <div class="project-skills-container">
+              <button class="project-skill-btn">FEA</button>
+              <button class="project-skill-btn">Ansys Structural</button>
+              <button class="project-skill-btn">SolidWorks</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Structural Analysis of Tiltrotor hub</h3>
+            <p>Performed static FEA analysis of a hinge less tiltrotor hub made of AISI 4340 steel to extract flap, lag and torsional stiffness across radial stations including collar, flex-beam, center & tip. Implemented fixed boundary conditions in ANSYS to generated stiffness profiles and validated against analytical results for improved aeroelastic modeling.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="project-image">
+            <img src="https://drive.google.com/thumbnail?id=1J0JiaPJ0eDEft00f5LeWlrUpMEAyMKpU&sz=w400-h250-c" 
+                 alt="Structural Analysis of CHIRON Wheel RIM" 
+                 class="project-photo"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/7fb3d3?text=Chiron+Wheel+Analysis'; this.onerror=null;">
+            <div class="project-skills-container">
+              <button class="project-skill-btn">SolidWorks</button>
+              <button class="project-skill-btn">Ansys Material Designer</button>
+              <button class="project-skill-btn">Ansys Mechanical</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Structural Analysis of CHIRON Wheel RIM</h3>
+            <p>Designed a 2D shell model of a Bugatti Chiron wheel rim in SolidWorks and analyzed a novel aluminum carbon fiber composite showing 15% strength to weight improvement and reduced deformation over conventional aluminum and steel alloy wheel rims.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="project-image">
+            <img src="https://drive.google.com/thumbnail?id=1dYNyx-94vhriTW_jDFdM-P2AkzZn0tNO&sz=w400-h250-c" 
+                 alt="Design and Analysis of an Industrial Table" 
+                 class="project-photo"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/7fb3d3?text=Industrial+Table'; this.onerror=null;">
+            <div class="project-skills-container">
+              <button class="project-skill-btn">FEA</button>
+              <button class="project-skill-btn">Structural Optimization</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Design and Analysis of an Industrial Table</h3>
+            <p>Conducted FEA and structural optimization of a 5 ton die support table for an injection molding company increasing load capacity from 2 to 6 tons by refining rubber wood layering and beam design and recommended in house machining to reduce outsourcing and improve quality control.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="project-image">
+            <img src="https://drive.google.com/thumbnail?id=1KN6OLZJsV_QeJwkchb4OSgG98BGm-_hk&sz=w400-h250-c" 
+                 alt="Square Composite Beam" 
+                 class="project-photo"
+                 loading="lazy"
+                 onerror="this.src='https://drive.google.com/uc?export=view&id=1KN6OLZJsV_QeJwkchb4OSgG98BGm-_hk'; this.onerror=function(){this.src='https://via.placeholder.com/400x250/1a1a2e/7fb3d3?text=Composite+Beam'; this.onerror=null;};">
+            <div class="project-skills-container">
+              <button class="project-skill-btn">Composite Materials</button>
+              <button class="project-skill-btn">FEA</button>
+              <button class="project-skill-btn">MATLAB</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Square Composite Beam</h3>
+            <p>Designed, developed, fabricated, simulated and tested a 24.5" composite hollow balsa core, ±45° carbon fiber-epoxy wrap beam using vacuum bagging to withstand a 7,200 lbf load, performing 3-point load testing and Tsai-Hill stress analysis. Conducted Tsai-Hill stress analysis, identified buckling and delamination failure modes, and enhanced structural performance by increasing wall thickness and improving resin bonding.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="project-image">
+            <img src="https://drive.google.com/thumbnail?id=16RyP0bE1TxHOC3TXTxtoBrXP-f4ZRO3P&sz=w400-h250-c" 
+                 alt="Spacecraft Thermal Design" 
+                 class="project-photo"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/7fb3d3?text=Spacecraft+Thermal'; this.onerror=null;">
+            <div class="project-skills-container">
+              <button class="project-skill-btn">Thermal Analysis</button>
+              <button class="project-skill-btn">Course Project</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Spacecraft Thermal Design</h3>
+            <p>Designed a six-node thermal network for a spacecraft electronics enclosure using nodal energy balance equations and custom view factor modeling to simulate solar infrared and albedo radiation in both hot and cold orbital cases. Predicted steady-state temperatures between 238°K & 300°K across all subsystems using EES and validated thermal control via passive MLI and Z93-coated radiator without additional hardware ensuring all components remained within operational limits.</p>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <div class="project-image">
+            <img src="https://drive.google.com/thumbnail?id=1T4RaoHStRkMaSXSDynIf-8qY7MSe0wJ9&sz=w400-h250-c" 
+                 alt="3D Printed Bridge Design" 
+                 class="project-photo"
+                 loading="lazy"
+                 onerror="this.src='https://via.placeholder.com/400x250/1a1a2e/7fb3d3?text=3D+Bridge+Design'; this.onerror=null;">
+            <div class="project-skills-container">
+              <button class="project-skill-btn">SolidWorks</button>
+              <button class="project-skill-btn">3D Printing</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>3D Printed Bridge Design</h3>
+            <p>Designed and simulated a 3D printed bridge in SolidWorks. Performed FEA to identify stress concentrations, refined the geometry, and experimentally tested prototypes. Ultimately reduced the final design weight from 30.4 g to 12 g while maintaining structural integrity under a 20 lbf load.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section fade-in" aria-labelledby="publications-title">
+      <h2 id="publications-title">Publications</h2>
+      <div class="publications-content">
+        <article class="publication-item">
+          <div class="publication-image">
+            <img src="https://drive.google.com/thumbnail?id=10wiF5fqNzWpvgviJ2teKpmEC6eGpIAKE&sz=w400-h250-c" 
+                 alt="Publication cover image" 
+                 class="publication-photo"
+                 loading="lazy"
+                 onerror="this.src='https://drive.google.com/uc?export=view&id=10wiF5fqNzWpvgviJ2teKpmEC6eGpIAKE'; this.onerror=function(){this.src='https://via.placeholder.com/400x250/1a1a2e/7fb3d3?text=Publication'; this.onerror=null;};">
+          </div>
+          <div class="publication-content">
+            <h3>CFD Analysis of Pulsatile Non-Newtonian Blood Flow in a Multi-Staged Stenosed Bifurcated Carotid Artery</h3>
+            <p>This research presents a comprehensive CFD analysis of pulsatile non-Newtonian blood flow through a multi-staged stenosed bifurcated carotid artery, investigating the complex hemodynamic patterns and their clinical implications for cardiovascular disease assessment.</p>
+            <div class="publication-links">
+              <a href="#" class="btn-primary" aria-label="Read full publication">Read Paper</a>
+              <a href="#" class="btn-secondary" aria-label="View abstract">Abstract</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in" aria-labelledby="contact-title">
+      <h2 id="contact-title">Get In Touch</h2>
+      <form class="contact-form" action="#" method="POST" aria-label="Contact form">
+        <input type="text" name="name" placeholder="Your Name" required aria-label="Your name">
+        <input type="email" name="email" placeholder="Your Email" required aria-label="Your email address">
+        <textarea name="message" placeholder="Your Message" rows="5" required aria-label="Your message"></textarea>
+        <button type="submit" aria-label="Send message">Send Message</button>
+      </form>
+      <div class="contact-links">
+        <p>Or reach out directly: <a href="mailto:dygajjar55@gmail.com">dygajjar55@gmail.com</a> | <a href="tel:+12403704530">+1 (240) 370-4530</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Action Button -->
+  <button id="beamup-fab" class="beamup-fab" aria-label="Scroll to top" title="Back to top">
+    <div class="rocket-container">
+      <span class="rocket-icon">🚀</span>
+    </div>
+    <span class="scotty-text">Beam me up, Scotty!</span>
+  </button>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html> 
